@@ -7,3 +7,7 @@ cd zsh-env
 
 zsh
 ```
+
+## Fish Shell Like Theme
+
+![view](figure/view.png)
