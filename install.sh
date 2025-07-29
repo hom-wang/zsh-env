@@ -2,7 +2,7 @@
 set -euo pipefail
 
 sudo apt update
-sudo apt install zsh fzf sed -y
+sudo apt install zsh fzf -y
 
 # >> antigen
 mkdir -p ~/.antigen
