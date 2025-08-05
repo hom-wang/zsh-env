@@ -25,7 +25,8 @@ if [[ -f $ANTIGEN_FILE ]]; then
   antigen apply
 
   # theme
-  source "$HOME/.zsh/themes/fishline.zsh-theme"
+  # source "$HOME/.zsh/themes/fishline.zsh-theme"
+  source "$HOME/.zsh/themes/fishlite.zsh-theme"
 
 else
   echo "Antigen not found ($ANTIGEN_FILE)"

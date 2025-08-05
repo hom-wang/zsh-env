@@ -17,11 +17,5 @@ _fish_pwd() {  # from fishy.zsh-theme
 
 local return_status="%B%F{red}%(?..[%?])%b%f"
 
-# ~/g/zsh-env ❯                main*
-PROMPT='%F{$NCOLOR}$(_fish_pwd)%f%(!.#. ❯) '
-RPROMPT='${return_status}%F{242}$(git_prompt_info)%f'
-
-ZSH_THEME_GIT_PROMPT_PREFIX=" "
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_DIRTY="%B%F{yellow}*%b%f"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
+# ~/g/zsh-env [e] ❯
+PROMPT='%F{$NCOLOR}$(_fish_pwd)%f ${return_status}%(!.#.❯) '
