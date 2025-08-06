@@ -1,5 +1,5 @@
 # bash path
-export PATH="$(bash -i -c 'echo $PATH')"
+# export PATH="$(bash -i -c 'echo $PATH')"
 
 ANTIGEN_FILE="$HOME/.antigen/antigen.zsh"
 if [[ -f $ANTIGEN_FILE ]]; then

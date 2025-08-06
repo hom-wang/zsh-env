@@ -15,7 +15,16 @@ _fish_pwd() {  # from fishy.zsh-theme
   echo "${(j:/:)pwd}"
 }
 
-local return_status="%B%F{red}%(?..[%?])%b%f"
+precmd() {
+  typeset -g LAST_EXIT_CODE=$?
+}
 
-# ~/g/zsh-env [e] ❯
-PROMPT='%F{$NCOLOR}$(_fish_pwd)%f ${return_status}%(!.#.❯) '
+_return_status() {
+  case $LAST_EXIT_CODE in
+    0|130|143) echo "" ;;
+    *) echo "%B%F{red}[${LAST_EXIT_CODE}]%f%b" ;;
+  esac
+}
+
+# ~/g/zsh-env [e]❯
+PROMPT='%F{$NCOLOR}$(_fish_pwd)%f $(_return_status)%(!.#.❯) '
