@@ -3,9 +3,9 @@
 ```bash
 git clone https://github.com/hom-wang/zsh-env.git
 cd zsh-env
-./install.sh
+just install
 
-zsh
+source ~/.zshrc
 ```
 
 ## Fish Shell Like Theme

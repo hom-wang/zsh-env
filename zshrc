@@ -43,3 +43,5 @@ zstyle ':completion:*' menu select
 
 # autoload -Uz compinit
 # compinit -i
+
+export PATH="$HOME/.local/bin:$PATH"
