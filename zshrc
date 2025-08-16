@@ -30,8 +30,7 @@ if [[ -f $ANTIGEN_FILE ]]; then
 
 else
   echo "Antigen not found ($ANTIGEN_FILE)"
-  # mkdir -p ~/.antigen
-  # curl -L git.io/antigen > ~/.antigen/antigen.zsh
+
 fi
 
 # ZINIT_FILE="$HOME/.local/share/zinit/zinit.git/zinit.zsh"
@@ -43,3 +42,5 @@ zstyle ':completion:*' menu select
 
 # autoload -Uz compinit
 # compinit -i
+
+export PATH="$HOME/.local/bin:$PATH"
