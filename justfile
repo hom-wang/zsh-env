@@ -1,11 +1,24 @@
 set unstable
 
-[script]
-install:
-    set -e
+SILENT := "/dev/null 2>&1"
 
-    sudo apt update
-    sudo apt install zsh fzf -y
+# chsh -s $(which zsh)
+
+[linux]
+install-zsh:
+    @sudo apt update
+    @sudo apt install zsh fzf -y
+    @sudo chsh -s $(which zsh) $(whoami)
+
+[macos]
+install-zsh:
+    @brew update
+    @brew install zsh fzf
+
+# config zsh
+[script]
+config:
+    set -e
 
     # >> antigen
     mkdir -p ~/.antigen
@@ -34,6 +47,5 @@ install:
     ln -s "$DOTFILES_DIR/zprofile" "$HOME/.zprofile"
 
     touch ~/.zshrc
-    sudo chsh -s $(which zsh) $(whoami)
 
-    # source "$HOME/.zshrc"
+install: install-zsh config
