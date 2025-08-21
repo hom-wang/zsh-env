@@ -1,4 +1,4 @@
-if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="green"; fi
+if [ $UID -eq 0 ]; then NCOLOR="red"; else NCOLOR="#87cefa"; fi
 
 _fish_pwd() {  # from fishy.zsh-theme
   local i pwd

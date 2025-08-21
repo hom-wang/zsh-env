@@ -44,3 +44,4 @@ zstyle ':completion:*' menu select
 # compinit -i
 
 export PATH="$HOME/.local/bin:$PATH"
+# . "$HOME/.cargo/env"
