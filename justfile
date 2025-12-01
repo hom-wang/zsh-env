@@ -1,3 +1,25 @@
+########################################################################################################################
+#
+# 📦 Just Installation Guide
+#
+# Just is a handy command runner, similar to make, used to define and execute project-specific commands.
+# Official site: https://just.systems/
+#
+#   Recommended version: 1.42.x or higher
+#
+# Installation:
+#
+#   🐧 Linux
+#   >> curl -sSf https://just.systems/install.sh | sudo bash -s -- --to /usr/local/bin --force
+#
+#   🍎 macOS
+#   >> brew install just
+#
+#   🪟 Windows (need restart terminal)
+#   >> winget install --id casey.just --source winget
+#
+########################################################################################################################
+
 set unstable
 
 SILENT := "/dev/null 2>&1"
